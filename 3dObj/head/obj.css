@@ -1,0 +1,85 @@
+.head,.head .side{
+    width: 8em;
+    height: 8em;
+    transform-style: preserve-3d;
+}
+
+
+.head {
+    animation: rotate 5s infinite ease;
+    transform: rotateX(-20deg) rotateY(-45deg);
+}
+
+.head .side {
+    position: absolute;
+    image-rendering: pixelated;
+    background: url("s_lona.png");
+    background-size: 64em;
+}
+
+.head .side:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 9em;
+    height: 9em;
+    top: -.5em;
+    bottom: 0; 
+    left: -.5em;
+    right: 0; 
+    transform: translateZ(.5em);
+    background-image: url(s_lona.png);
+    background-size: 72em;
+}
+
+
+.head .front {
+    transform: translateZ(4em); 
+    background-position: -8em -8em;
+}
+.head .back {
+    transform: translateZ(-4em) rotateY(180deg);
+    background-position: -24em -8em;  
+}
+.head .left {
+    transform: translateX(-4em) rotateY(-90deg);
+    background-position: 0em -8em;  
+}
+.head .right {
+    transform: translateX(4em) rotateY(90deg);
+    background-position: -16em -8em;  
+}
+.head .top {
+    transform: translateY(-4em) rotateX(90deg);
+    background-position: -8em 0em;
+}
+.head .bottom {
+    transform: translateY(4em) rotateX(-90deg) rotateZ(180deg);
+    background-position: -16em 0em;
+}
+
+
+.head .front:after {
+    background-position: 27em -9em;
+}
+.head .back:after {
+    background-position: 9em -9em;
+}
+.head .left:after {
+    background-position: 36em -9em;
+}
+.head .right:after {
+    background-position: 18em -9em;
+}
+.head .top:after {
+    background-position: 27em 0em;
+}
+.head .bottom:after {
+    background-position: 18em 0em;
+}
+
+@keyframes rotate {
+  100% {
+      transform: rotateX(-45deg) rotateY(315deg);
+  }
+}

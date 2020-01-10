@@ -1,0 +1,19 @@
+html,body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    perspective: 1000px;
+    perspective-origin: center center;
+    
+    overflow: hidden;
+    font-size: 15px;
+    
+    background: #391f05;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.025) 50%, transparent 50%);
+    background-size: 1rem 100%;
+}

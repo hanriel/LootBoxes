@@ -1,0 +1,147 @@
+@keyframes open {
+  50% {
+      transform: rotateX(45deg) translateY(-5em);
+  }
+  100% {
+      
+      transform: rotateX(0deg) translateY(-5em);
+  }
+}
+
+.chest {    
+    width: 14em;
+    height: 14em;
+    transform-style: preserve-3d;
+    animation: rotate 5s infinite ease;
+    transform: rotateX(-45deg) rotateY(-45deg);
+}
+
+.chest .side {
+    width: 14em;
+    position: absolute;
+    image-rendering: pixelated;
+    background: url('img/normal.png');
+    background-size: 64em;
+    transition: .45s;
+}
+
+
+.chest:hover .side {
+    background: url('img/christmas.png');
+    background-size: 64em;
+}
+
+
+/*DOWN*/
+
+.chest>.down>.side {
+    height: 10em;
+}
+
+.chest>.down>.front {
+    transform: translateZ(7em); 
+    background-position: -14em -33em;
+}
+.chest>.down>.back {
+    transform: translateZ(-7em) rotateY(180deg);
+    background-position: -42em -33em;  
+}
+.chest>.down>.left {
+    transform: translateX(-7em) rotateY(-90deg);
+    background-position: 0em -33em;  
+}
+.chest>.down>.right {
+    transform: translateX(7em) rotateY(90deg);
+    background-position: -28em -33em;  
+}
+.chest>.down>.top {
+    height: 14em;
+    transform: translateY(-7em) rotateX(90deg);
+    background-position: -14em -19em;
+}
+.chest>.down>.bottom {
+    height: 14em;
+    transform: translateY(3em) rotateX(-90deg) rotateZ(180deg);
+    background-position: -28em -19em;
+}
+
+/*UP*/
+
+.chest>.up {
+    animation: open 5s infinite ease;
+    transform-style: preserve-3d;
+    transform: translateY(-5em);
+    transform-origin: 0em 0em -7em;
+}
+.chest>.up>.side {
+    height: 5em;
+}
+
+.chest>.up>.front {
+    transform: translateZ(7em); 
+    background-position: -14em -14em;
+}
+.chest>.up>.back {
+    transform: translateZ(-7em) rotateY(180deg);
+    background-position: -42em -14em;  
+}
+.chest>.up>.left {
+    transform: translateX(-7em) rotateY(-90deg);
+    background-position: 0em -14em;  
+}
+.chest>.up>.right {
+    transform: translateX(7em) rotateY(90deg);
+    background-position: -28em -14em;  
+}
+.chest>.up>.top {
+    width: 14em;
+    height: 14em;
+    transform: translateY(-7em) rotateX(90deg);
+    background-position: -14em 0em;
+}
+.chest>.up>.bottom {
+    width: 14em;
+    height: 14em;
+    transform: translateY(-2em) rotateX(-90deg);
+    background-position: -14em -19em;
+}
+
+/*KEY*/
+
+.chest>.up>.ke {
+    transform-style: preserve-3d;
+    transform: translateX(6em) translateY(3em) translateZ(7.5em);
+}
+.chest .ke>.side {
+    width: 2em;
+    height: 4em;
+}
+
+.chest>.up>.ke>.front {
+    transform: translateZ(0.5em); 
+    background-position: -1em -1em;
+}
+.chest>.up>.ke>.back {
+    transform: translateZ(-0.5em) rotateY(180deg);
+    background-position: -4em -1em;  
+}
+.chest>.up>.ke>.left {
+    width: 1em;
+    transform: translateX(-0.5em) rotateY(-90deg);
+    background-position: 0em -1em;  
+}
+.chest>.up>.ke>.right {
+    width: 1em;
+    transform: translateX(1.5em) rotateY(90deg);
+    background-position: -3em -1em;  
+}
+.chest>.up>.ke>.top {
+    height: 1em;
+    transform: translateY(-0.5em) rotateX(90deg);
+    background-position: -1em 0em;
+}
+.chest>.up>.ke>.bottom {
+    height: 1em;
+    transform: translateY(3.5em) rotateX(-90deg);
+    background-position: -3em 0em;
+}
